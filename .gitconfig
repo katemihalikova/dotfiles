@@ -14,7 +14,7 @@
 [push]
 	default = simple
 [url "https://github.com/"]
-	insteadOf = git://github.com/
+#	insteadOf = git://github.com/
 [diff]
 	tool = vscode-difftool
 [difftool "vscode-difftool"]
@@ -33,7 +33,7 @@
 	bru = !sh -c \"git fetch upstream refs/pull-requests/${1}/from && git checkout FETCH_HEAD\" - # bitbucket server
 	mr = !sh -c \"git fetch origin merge-requests/${1}/head && git checkout FETCH_HEAD\" - # gitlab
 	mru = !sh -c \"git fetch upstream merge-requests/${1}/head && git checkout FETCH_HEAD\" - # gitlab
-	pub = !sh -c \"git push -u origin `git rev-parse --abbrev-ref HEAD`\" -
+#	pub = !sh -c \"git push -u origin `git rev-parse --abbrev-ref HEAD`\" - # git <2.37 only
 	wip = !sh -c \"git add -A && git commit --no-gpg-sign -m wip\" -
 	todo = "!sh -c ' \
 [ $GIT_PREFIX ] && cd $GIT_PREFIX; \
